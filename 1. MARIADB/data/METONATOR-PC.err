@@ -1,0 +1,25 @@
+2021-03-30 22:32:51 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2021-03-30 22:32:51 0 [Note] InnoDB: Uses event mutexes
+2021-03-30 22:32:51 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-03-30 22:32:51 0 [Note] InnoDB: Number of pools: 1
+2021-03-30 22:32:51 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2021-03-30 22:32:51 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2021-03-30 22:32:51 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-03-30 22:32:51 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2021-03-30 22:32:51 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-03-30 22:32:51 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-03-30 22:32:51 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2021-03-30 22:32:51 0 [Note] InnoDB: Waiting for purge to start
+2021-03-30 22:32:51 0 [Note] InnoDB: 10.3.28 started; log sequence number 1624454; transaction id 20
+2021-03-30 22:32:51 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\MeTonaTOR\Desktop\PortableWOPL\1. MARIADB\data\ib_buffer_pool
+2021-03-30 22:32:51 0 [Note] InnoDB: Buffer pool(s) load completed at 210330 22:32:51
+2021-03-30 22:32:51 0 [Note] Plugin 'FEEDBACK' is disabled.
+2021-03-30 22:32:51 0 [Note] Server socket created on IP: '::'.
+2021-03-30 22:33:21 0 [ERROR] InnoDB: The innodb_system data file 'ibdata1' must be writable
+2021-03-30 22:33:21 0 [ERROR] InnoDB: The innodb_system data file 'ibdata1' must be writable
+2021-03-30 22:33:21 0 [ERROR] Plugin 'InnoDB' init function returned error.
+2021-03-30 22:33:21 0 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2021-03-30 22:33:21 0 [Note] Plugin 'FEEDBACK' is disabled.
+2021-03-30 22:33:21 0 [ERROR] Unknown/unsupported storage engine: InnoDB
+2021-03-30 22:33:21 0 [ERROR] Aborting
+

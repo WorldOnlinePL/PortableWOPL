@@ -1,0 +1,218 @@
+2020.04.30 13:02:19 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.100
+2020.04.30 14:04:32 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.101
+2020.04.30 16:54:01 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.132
+2020.05.01 10:42:41 org.jivesoftware.database.DbConnectionManager - Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:42:40 heartbeat - read: -8207 ms.
+java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:42:40 heartbeat - read: -8207 ms.
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at org.apache.commons.dbcp2.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:121) ~[commons-dbcp2-2.6.0.jar:2.6.0]
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:355) ~[commons-dbcp2-2.6.0.jar:2.6.0]
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:889) ~[commons-pool2-2.6.2.jar:2.6.2]
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:424) ~[commons-pool2-2.6.2.jar:2.6.2]
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:349) ~[commons-pool2-2.6.2.jar:2.6.2]
+	at org.apache.commons.dbcp2.PoolingDataSource.getConnection(PoolingDataSource.java:134) ~[commons-dbcp2-2.6.0.jar:2.6.0]
+	at org.jivesoftware.database.EmbeddedConnectionProvider.getConnection(EmbeddedConnectionProvider.java:65) ~[xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.database.DbConnectionManager.setConnectionProvider(DbConnectionManager.java:654) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.database.DbConnectionManager.ensureConnectionProvider(DbConnectionManager.java:101) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.database.DbConnectionManager.getConnection(DbConnectionManager.java:162) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.loadProperties(JiveProperties.java:438) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.init(JiveProperties.java:90) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.getInstance(JiveProperties.java:66) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveGlobals.getProperty(JiveGlobals.java:557) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.cache.CacheFactory.<clinit>(CacheFactory.java:105) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.initialize(XMPPServer.java:426) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.start(XMPPServer.java:672) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.<init>(XMPPServer.java:268) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) [?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) [?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) [?:?]
+	at java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:124) [?:?]
+	at jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:346) [?:?]
+	at java.lang.Class.newInstance(Class.java:604) [?:?]
+	at org.jivesoftware.openfire.starter.ServerStarter.start(ServerStarter.java:92) [startup.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.starter.ServerStarter.main(ServerStarter.java:56) [startup.jar:4.6.0-SNAPSHOT]
+Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:42:40 heartbeat - read: -8207 ms.
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.persist.Logger.open(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.Database.reopen(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.Database.open(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	... 32 more
+2020.05.01 10:44:36 org.jivesoftware.util.JiveProperties - ConnectionManager.getConnection() failed to obtain a connection after 11 retries. The exception from the last attempt is as follows: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:44:35 heartbeat - read: -3279 ms.
+java.sql.SQLException: ConnectionManager.getConnection() failed to obtain a connection after 11 retries. The exception from the last attempt is as follows: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:44:35 heartbeat - read: -3279 ms.
+	at org.jivesoftware.database.DbConnectionManager.getConnection(DbConnectionManager.java:204) ~[xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.loadProperties(JiveProperties.java:438) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.init(JiveProperties.java:90) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.getInstance(JiveProperties.java:66) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveGlobals.getProperty(JiveGlobals.java:557) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.cache.CacheFactory.<clinit>(CacheFactory.java:105) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.initialize(XMPPServer.java:426) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.start(XMPPServer.java:672) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.<init>(XMPPServer.java:268) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) [?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) [?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) [?:?]
+	at java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:124) [?:?]
+	at jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:346) [?:?]
+	at java.lang.Class.newInstance(Class.java:604) [?:?]
+	at org.jivesoftware.openfire.starter.ServerStarter.start(ServerStarter.java:92) [startup.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.starter.ServerStarter.main(ServerStarter.java:56) [startup.jar:4.6.0-SNAPSHOT]
+2020.05.01 10:46:31 org.jivesoftware.openfire.XMPPServer - Database could not be accessed
+java.sql.SQLException: ConnectionManager.getConnection() failed to obtain a connection after 11 retries. The exception from the last attempt is as follows: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:46:30 heartbeat - read: -8330 ms.
+	at org.jivesoftware.database.DbConnectionManager.getConnection(DbConnectionManager.java:204) ~[xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.verifyDataSource(XMPPServer.java:1027) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.start(XMPPServer.java:680) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.<init>(XMPPServer.java:268) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) [?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) [?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) [?:?]
+	at java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:124) [?:?]
+	at jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:346) [?:?]
+	at java.lang.Class.newInstance(Class.java:604) [?:?]
+	at org.jivesoftware.openfire.starter.ServerStarter.start(ServerStarter.java:92) [startup.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.starter.ServerStarter.main(ServerStarter.java:56) [startup.jar:4.6.0-SNAPSHOT]
+2020.05.01 10:46:31 org.jivesoftware.openfire.XMPPServer - java.sql.SQLException: ConnectionManager.getConnection() failed to obtain a connection after 11 retries. The exception from the last attempt is as follows: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:46:30 heartbeat - read: -8330 ms.
+java.lang.IllegalArgumentException: java.sql.SQLException: ConnectionManager.getConnection() failed to obtain a connection after 11 retries. The exception from the last attempt is as follows: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:46:30 heartbeat - read: -8330 ms.
+	at org.jivesoftware.openfire.XMPPServer.verifyDataSource(XMPPServer.java:1037) ~[xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.start(XMPPServer.java:680) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.<init>(XMPPServer.java:268) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) [?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) [?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) [?:?]
+	at java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:124) [?:?]
+	at jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:346) [?:?]
+	at java.lang.Class.newInstance(Class.java:604) [?:?]
+	at org.jivesoftware.openfire.starter.ServerStarter.start(ServerStarter.java:92) [startup.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.starter.ServerStarter.main(ServerStarter.java:56) [startup.jar:4.6.0-SNAPSHOT]
+Caused by: java.sql.SQLException: ConnectionManager.getConnection() failed to obtain a connection after 11 retries. The exception from the last attempt is as follows: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@2ed9896d[file =C:\Users\PC\Desktop\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-01 08:46:30 heartbeat - read: -8330 ms.
+	at org.jivesoftware.database.DbConnectionManager.getConnection(DbConnectionManager.java:204) ~[xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.verifyDataSource(XMPPServer.java:1027) ~[xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	... 11 more
+2020.05.02 11:01:40 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.05.02 16:25:10 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.164
+2020.05.03 16:03:01 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.196
+2020.05.03 16:03:33 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.197
+2020.05.04 11:01:41 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.05.05 20:18:59 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.228
+2020.05.06 19:14:28 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.05.06 20:34:00 org.jivesoftware.database.DbConnectionManager - Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@506bb4e3[file =D:\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-06 18:33:59 heartbeat - read: -8579 ms.
+java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@506bb4e3[file =D:\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-06 18:33:59 heartbeat - read: -8579 ms.
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at java.sql.DriverManager.getConnection(DriverManager.java:677) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:228) ~[java.sql:?]
+	at org.apache.commons.dbcp2.DriverManagerConnectionFactory.createConnection(DriverManagerConnectionFactory.java:121) ~[commons-dbcp2-2.6.0.jar:2.6.0]
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:355) ~[commons-dbcp2-2.6.0.jar:2.6.0]
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:889) ~[commons-pool2-2.6.2.jar:2.6.2]
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:424) ~[commons-pool2-2.6.2.jar:2.6.2]
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:349) ~[commons-pool2-2.6.2.jar:2.6.2]
+	at org.apache.commons.dbcp2.PoolingDataSource.getConnection(PoolingDataSource.java:134) ~[commons-dbcp2-2.6.0.jar:2.6.0]
+	at org.jivesoftware.database.EmbeddedConnectionProvider.getConnection(EmbeddedConnectionProvider.java:65) ~[xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.database.DbConnectionManager.setConnectionProvider(DbConnectionManager.java:654) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.database.DbConnectionManager.ensureConnectionProvider(DbConnectionManager.java:101) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.database.DbConnectionManager.getConnection(DbConnectionManager.java:162) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.loadProperties(JiveProperties.java:438) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.init(JiveProperties.java:90) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.getInstance(JiveProperties.java:66) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveGlobals.getProperty(JiveGlobals.java:557) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.cache.CacheFactory.<clinit>(CacheFactory.java:105) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.initialize(XMPPServer.java:426) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.start(XMPPServer.java:672) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.<init>(XMPPServer.java:268) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) [?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) [?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) [?:?]
+	at java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:124) [?:?]
+	at jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:346) [?:?]
+	at java.lang.Class.newInstance(Class.java:604) [?:?]
+	at org.jivesoftware.openfire.starter.ServerStarter.start(ServerStarter.java:92) [startup.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.starter.ServerStarter.main(ServerStarter.java:56) [startup.jar:4.6.0-SNAPSHOT]
+Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@506bb4e3[file =D:\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-06 18:33:59 heartbeat - read: -8579 ms.
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.persist.Logger.open(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.Database.reopen(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.Database.open(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source) ~[hsqldb-2.4.1.jar:2.4.1]
+	... 32 more
+2020.05.06 20:35:55 org.jivesoftware.util.JiveProperties - ConnectionManager.getConnection() failed to obtain a connection after 11 retries. The exception from the last attempt is as follows: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@506bb4e3[file =D:\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-06 18:35:54 heartbeat - read: -3586 ms.
+java.sql.SQLException: ConnectionManager.getConnection() failed to obtain a connection after 11 retries. The exception from the last attempt is as follows: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@506bb4e3[file =D:\portable-core fix1\openfire\embedded-db\openfire.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2020-05-06 18:35:54 heartbeat - read: -3586 ms.
+	at org.jivesoftware.database.DbConnectionManager.getConnection(DbConnectionManager.java:204) ~[xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.loadProperties(JiveProperties.java:438) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.init(JiveProperties.java:90) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveProperties.getInstance(JiveProperties.java:66) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.JiveGlobals.getProperty(JiveGlobals.java:557) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.util.cache.CacheFactory.<clinit>(CacheFactory.java:105) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.initialize(XMPPServer.java:426) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.start(XMPPServer.java:672) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.XMPPServer.<init>(XMPPServer.java:268) [xmppserver-4.6.0-SNAPSHOT.jar:4.6.0-SNAPSHOT]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) [?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) [?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) [?:?]
+	at java.lang.reflect.ReflectAccess.newInstance(ReflectAccess.java:124) [?:?]
+	at jdk.internal.reflect.ReflectionFactory.newInstance(ReflectionFactory.java:346) [?:?]
+	at java.lang.Class.newInstance(Class.java:604) [?:?]
+	at org.jivesoftware.openfire.starter.ServerStarter.start(ServerStarter.java:92) [startup.jar:4.6.0-SNAPSHOT]
+	at org.jivesoftware.openfire.starter.ServerStarter.main(ServerStarter.java:56) [startup.jar:4.6.0-SNAPSHOT]
+2020.05.12 20:04:03 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.05.12 21:16:51 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.260
+2020.05.13 15:57:58 org.jivesoftware.openfire.plugin.rest.exceptions.RESTExceptionMapper - UserNotFoundException: Could not get user with resource sbrw.292
+2020.05.18 17:00:07 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.06.16 22:08:28 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.06.25 18:11:44 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.07.02 22:35:40 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.07.05 23:35:36 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.07.13 15:36:05 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.07.17 19:10:37 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.07.28 22:20:07 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.08.01 12:39:58 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.08.18 23:37:49 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.09.19 22:04:16 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.10.10 15:08:36 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.10.15 18:21:46 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.10.22 18:25:06 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.11.02 17:52:17 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.11.24 23:06:36 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.12.06 21:26:45 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.12.08 21:36:21 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.12.10 22:13:08 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.12.15 21:19:31 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.12.19 18:02:15 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.12.23 12:28:24 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2020.12.27 17:16:07 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.01.02 20:13:57 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.01.05 17:31:09 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.01.08 22:06:23 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.01.10 23:49:59 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.01.13 11:51:08 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.01.16 02:38:03 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.01.23 11:36:44 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.01.28 18:08:35 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.02.10 18:27:30 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.03.02 13:55:02 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.03.05 10:58:29 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.03.07 12:07:26 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.03.13 02:43:21 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.03.17 00:29:17 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
+2021.03.31 03:08:23 org.jivesoftware.openfire.update.UpdateManager - Error: update service check did not save correctly. Stopping update service.
