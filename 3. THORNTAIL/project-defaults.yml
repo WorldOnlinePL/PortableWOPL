@@ -13,16 +13,6 @@ thorntail:
         max-pool-size: 64
         min-pool-size: 8
         share-prepared-statements: true
-  mail:
-    mail-sessions:
-      Gmail:
-        smtp-server:
-          username: 
-          password: 
-          ssl: true
-    smtp:
-      host: smtp.gmail.com
-      port: 465
   http:
     port: 8680
   undertow:
