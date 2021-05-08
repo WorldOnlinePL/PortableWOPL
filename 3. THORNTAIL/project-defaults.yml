@@ -3,7 +3,7 @@ thorntail:
     data-sources:
       SoapBoxDS:
         driver-name: mysql
-        connection-url: jdbc:mysql://localhost:55555/soapbox?serverTimezone=CET
+        connection-url: jdbc:mysql://localhost:55555/SOAPBOX?serverTimezone=CET
         user-name: root
         password: 
         valid-connection-checker-class-name: org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker
@@ -13,6 +13,16 @@ thorntail:
         max-pool-size: 64
         min-pool-size: 8
         share-prepared-statements: true
+  mail:
+    mail-sessions:
+      Gmail:
+        smtp-server:
+          username: 
+          password: 
+          ssl: true
+    smtp:
+      host: smtp.gmail.com
+      port: 465
   http:
     port: 8680
   undertow:
